@@ -177,6 +177,8 @@ header div {
     "A B C"
     "D B F"
     "D E F"; 
+    place-items: center;
+align-items: start;
   }
   .page div:nth-child(1) {
     grid-area: A;
@@ -198,10 +200,10 @@ header div {
     grid-area: F;
     display: grid;
   }
-  .card-new span{
+  .card span, .card-new span{
     animation: topdown 2s ;
   }
-  .card-new img {
+  .card img, .card-new img {
     animation: downtop 700ms;
     border-radius: 20px;
   }
