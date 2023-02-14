@@ -76,13 +76,10 @@ header div {
 .page {
  width: 32rem;
  margin: auto;
+ display: flex;
+ flex-direction: column;
+ gap: 3.2rem;
 
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  gap: 3.2rem;
 }
 
 .card, .card-new {
@@ -110,9 +107,9 @@ main {
 }
 .card img {
   border-radius: 2rem;
-  animation: downtop 700ms;
   width: 100%;
   height: auto;
+  animation: downtop 700ms;
 }
 
 .card-new {
@@ -154,7 +151,7 @@ main {
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1444px) {
   body {
     display: flex;
     width: 100%;
@@ -169,38 +166,43 @@ main {
     background: var(--bg-header);
     color: #FFF;
   }
+
   .page {
     max-width: 198rem;
     max-height: 108rem;
-    margin: auto 0;
-    padding: 0 4rem;
-  }
-  main {
+    width: 100vh;
+    padding: 0 2rem;
     display: grid;
     grid-template-areas:
     "A B C"
     "D B F"
     "D E F"; 
-    width: 100vh;
   }
-  main div:nth-child(1) {
+  .page div:nth-child(1) {
     grid-area: A;
   }
-  main div:nth-child(2){
+  .page div:nth-child(2){
     grid-area: B;
   }
-  main div:nth-child(3){
+  .page div:nth-child(3){
     grid-area: C;
   }
-  main div:nth-child(4){
+  .page div:nth-child(4){
     grid-area: D;
   }
-  main div:nth-child(5){
+  .page div:nth-child(5){
     display: grid;
     grid-area: E;
   }
-  main div:nth-child(6){
+  .page div:nth-child(6){
     grid-area: F;
     display: grid;
+  }
+  .card-new span{
+    animation: topdown 2s ;
+  }
+  .card-new img {
+    animation: downtop 700ms;
+    border-radius: 20px;
   }
 }
